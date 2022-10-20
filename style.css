@@ -45,8 +45,13 @@ body {
 }
 #bg-image {
     border: 1px dotted red;
-    padding: 10px;
-    margin: 5%;
-    width: 200px;
-    display: ;
+    width: 100vw;
+    height: 75vw;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    background-image: url(/imatges/baixa9.jpg);
+    opacity: 0.2;
+    z-index: -4
 }
