@@ -17,15 +17,36 @@ body {
 #menu {
     color: white;
     border: 1px solid white;
-    text-align: center;
+    padding: auto;
+    margin: 10% auto;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
 }
+
 #menu-items {
-    border: 1px dashed lightgray;
+    border: 1px dashed red;
+    width: 200px;
+    margin: 50px 5px;
 }
+
+#menu-items a {
+    color: white;
+    text-decoration: none;
+}
+
 .menu-item {
     border: 1px solid green;
-    padding: 10px 0;
+    padding: 10% 0;
+    margin: 5%;
 }
 #bg-image {
     border: 1px dotted red;
+    padding: 10px;
+    margin: 5%;
+    width: 200px;
+    display: ;
 }
