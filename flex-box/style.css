@@ -28,6 +28,7 @@ a {
     
 }
 
+/* Classe general de container. */
 .container {
     border: 2px dotted blue; 
     margin: 0 auto;
@@ -37,6 +38,7 @@ a {
     color: blue;
 }
 
+/* Classe tipus container especial menú */
 .menu {
     /* border: 2px dotted blue; */
     margin: 0 auto;
@@ -48,6 +50,7 @@ a {
     justify-content: center;
 }
 
+/* divs dins el container */
 .contingut {
     border: 1px solid rgb(214, 52, 34); 
     height: 30px;
@@ -56,10 +59,13 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 .menu .contingut  {
     width: auto;
     border: 0;
  }
+
+ /* Per fer pràctiques d'alineació dins els containers */
 .flex-start {
     justify-content: flex-start;
 }
@@ -94,7 +100,13 @@ a {
     flex-wrap: wrap;
     width: 80%;
     height: 150px;
-    justify-content:space-around ;
+    
+}
+
+.flex-wrap .flex-item {
+    height: 5vh;
+    width: 5vw;
+    font-size: 0.6em;
 }
 
 .center {
@@ -104,3 +116,25 @@ a {
 .dreta {
     align-items: flex-end;
 }
+
+/* Wrap */
+.wrap-container,
+.no-wrap-container {
+    border: 2px dashed brown;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    height: 300px;
+}
+.wrap-container .contingut, 
+.no-wrap-container .contingut {
+    height: 10vh;
+    width: 10vw;
+    font-size: 0.6em;
+}
+.wrap-container {
+    flex-wrap: wrap;
+}
+.no-wrap-container {
+    flex-wrap: nowrap;
