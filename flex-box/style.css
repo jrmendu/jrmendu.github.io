@@ -3,16 +3,34 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+main{
+    padding: 10px;
+    margin: 10px;
+}
+
+h1 {
+    text-decoration: underline;
+    color: brown;
+}
+
+h2 {
+    color: rgb(209, 15, 57);
+}
+
 .container {
-    border: 2px dotted salmon;
+    border: 2px dotted blue;
     display: flex;
     height: 100px;
+    color: blue;
 }
 
 .contingut {
     border: 1px solid rgb(214, 52, 34);
-    height: 20px;
-    width: 50px;
+    height: 30px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-start {
@@ -43,4 +61,12 @@ body {
     height: 200px;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.center {
+    align-items: center;
+}
+
+.dreta {
+    align-items: flex-end;
 }
