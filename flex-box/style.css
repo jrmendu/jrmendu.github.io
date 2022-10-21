@@ -41,7 +41,7 @@ a {
     /* border: 2px dotted blue; */
     margin: 0 auto;
     width: 60%;
-    height: 100px;
+    height: 150px;
     color: blue;
     display: flex;
     flex-direction: column;
@@ -88,6 +88,13 @@ a {
     height: 200px;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+    width: 80%;
+    height: 150px;
+    justify-content:space-around ;
 }
 
 .center {
