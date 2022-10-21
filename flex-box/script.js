@@ -1,1 +1,1 @@
-document.getElementById("codi").innerText = "Sóc en js. Estic ben enllaçat"
+document.getElementById("codi").innerText = "JS"
