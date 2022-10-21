@@ -1,0 +1,1 @@
+document.getElementById("codi").innerText = "Sóc en js. Estic ben enllaçat"
