@@ -10,15 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Algunas Etiquetas HTML Poco Conocidas</title>
+    <title>Etiquetas HTML Poco Conocidas</title>
 </head>
 <body>
-    <h1>Algunas Etiquetas HTML Poco Conocidas</h1>
+    <h1>Etiquetas HTML Poco Conocidas</h1>
     <main id="main">
         <section id="indice">
-
             <h2>Índice</h2>
-
             <ul>
                 <li><a href="#1">Contenido Editable</a></li>
                 <li><a href="#2">Color Picker</a></li>
@@ -32,39 +30,47 @@
                 <li><a href="#10">Autocompletar</a></li>
             </ul>
         </section>
+
+<!-- Pre i code -->
         <section id="pre-y-code">
+            <div style="margin: 0 auto;">
             <h2>&lt;pre&gt; y &lt;code&gt;</h2>
             <p>Esto es un trozo de código <code>inline</code> con &lt;code&gt;: <code>window.prompt()</code>.</p>
 <p>Esto es un bloque con &lt;pre&gt;:</p>
+
 <pre>
-window.prompt()
+    window.prompt()
 </pre>
-Ejemplo con &lt;pre&gt; y &lt;code&gt; (<code>display: block;</code>):
-<pre><code>
+
+<p>Ejemplo con &lt;pre&gt; y &lt;code&gt; (<code>display: block;</code>):</p>
+
+<pre>
+<code>
 window.prompt()
 
-</code></pre>
+</code>
+<span class="material-symbols-outlined">
+    content_copy
+    </span>
+</pre>
+            </div>
         </section>
 
+<!-- Contenido editable -->
         <section id="contenidos">
-
             <div id="1">
-                <h2>1. Contenido Editable</h2>
                 <div class="etiqueta">
-
+                    <h2>1. Contenido Editable</h2>
                     <p contenteditable="true">Esto es una caja de contenido editable.</p>
                     
-<pre style="height: 200px; display: flex; justify-content: space-around;">
-<code style="display: inline-block; border: 1px solid black;">
+<pre>
+<code>
 contenteditable="true"
 
 </code>
-
-<span class="material-symbols-outlined"
-style="display: inline-block; padding: 10px; border: 1px solid black; height:auto; align-self: center;">
+<span class="material-symbols-outlined">
 content_copy
 </span>
-
 </pre>
                 </div>
             </div>
@@ -77,9 +83,14 @@ content_copy
 <pre><code>
 &lt;input type="color" value="#dfdfdf"&gt;
 
-</code></pre>
+</code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
+</pre>
             </div>
             
+<!-- Marques de text -->
             <div id="3" class="etiqueta">
                 <h2>3. Highlight o Marcado de Texto</h2>
                 <p>
@@ -98,9 +109,14 @@ mark {
     background-color: #fdfdfd;
     text-decoration: underline;
 }
-                </code></pre>
+</code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
+</pre>
             </div>
-            
+
+<!-- Barres de progés -->
             <div id="4" class="etiqueta">
                 <h2>4. Barras de Progreso</h2>
                 <meter min="0" max="100" value="50"></meter>
@@ -109,15 +125,21 @@ mark {
                 <progress min="0" max="100" value=""></progress>
                 <progress min="0" max="100" value="50">50%</progress>
 
-                <pre><code>
+<pre>
+<code>
 
 &lt;meter min="0" max="100" value="50"&gt;&lt;/meter&gt;
 
 &lt;progress min="0" max="100" value="50"&gt;50%&lt;/progress&gt;
 
-                </code></pre>
+</code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
+</pre>
             </div>
-            
+
+<!-- Corrector ortografic -->
             <div id="5" class="etiqueta">
                 <h2>5. Corrector Ortográfico: atributo spellcheck</h2>
                 <p contenteditable="true" spellcheck="true">
@@ -125,11 +147,17 @@ mark {
                 Se puede cambiar idioma con <code>lang="en"</code>.</p>
                 <textarea lang="es" cols="30" spellcheck="true">Escribe en español...</textarea>
                 <textarea lang="en" cols="30" spellcheck="true">Escribe texto en inglés...</textarea>
-                <pre><code>
+<pre>
+<code>
 lang="en" spellcheck="true"
-                </code></pre>
+</code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
+</pre>
             </div>
 
+<!-- Acordeon -->
             <div id="6" class="etiqueta">
                 <h2>6. Acordeón con &lt;details&gt;</h2>
                 
@@ -137,15 +165,21 @@ lang="en" spellcheck="true"
                     <summary>Esto es un tema</summary>
                     <p>Esto es el detalle del tema.</p>
                 </details>
-<pre><code>
+<pre>
+<code>
 &lt;details&gt;
     &lt;summary&gt;Esto es un tema&lt;/summary&gt;
     &lt;p&gt;Esto es el detalle del tema.&lt;/p&gt;
 &lt;/details&gt;
 
-</code></pre>
+</code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
+</pre>
             </div>
 
+<!-- Modals -->
             <div id="7" class="etiqueta">
                 <h2>7. Modales con &lt;dialog&gt;</h2>
 
@@ -155,6 +189,7 @@ lang="en" spellcheck="true"
                     <dialog open>Esto es una etiqueta dialog abierta</dialog> 
                 -->
 
+<!-- Dialog -->
                 <h3>Botones apra abrir y cerrar dialog</h3>
                 <div style="margin-bottom: 10px;">
                 <!-- Botón para abrir el modal -->
@@ -176,7 +211,8 @@ lang="en" spellcheck="true"
 
                 <button onclick="miDialog.close()">Cerrar modal</button>
                 </div>
-<pre><code>
+<pre>
+<code>
 &lt;button onclick="miDialog.showModal()">Abrir modal&lt;/button&gt;
 &lt;dialog id="miDialog"&gt;
     &lt;button id="X" 
@@ -190,9 +226,14 @@ lang="en" spellcheck="true"
     &lt;/p&gt;
 &lt;/dialog&gt;
 
-</code></pre>
+</code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
+</pre>
             </div>
             
+<!-- Label amb input -->
             <div id="8" class="etiqueta">
                 <h2>8. &lt;label&gt; con &lt;input&gt;</h2>
 
@@ -229,8 +270,15 @@ lang="en" spellcheck="true"
 <code>
 &lt;form action="#"&gt;
     &lt;div&gt;
-        &lt;label for="text-input" style="border: 1px solid brown; width: 100%; display:block"&gt;Etiqueta del input (haz clic)&lt;/label&gt;
-        &lt;input id="text-input" style="display: block; width: 100%; margin-top: 5px;" type="text" placeholder="Texto..."&gt;
+        &lt;label for="text-input" 
+        style="border: 1px solid brown; width: 100%; display:block"&gt;
+            Etiqueta del input (haz clic)
+        &lt;/label&gt;
+        &lt;input 
+            id="text-input" 
+            style="display: block; width: 100%; margin-top: 5px;" 
+            type="text" placeholder="Texto..."
+        &gt;
     &lt;/div&gt;
     
     &lt;fieldset id="radio-btn"&gt;
@@ -257,9 +305,13 @@ lang="en" spellcheck="true"
 &lt;/form&gt;
 
 </code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
 </pre>
             </div>
             
+<!-- Agrupar outgrup en select -->
             <div id="9" class="etiqueta">
                 <h2>9. Agrupar &lt;optgroup&gt; en &lt;select&gt;</h2>
                 <select 
@@ -278,18 +330,25 @@ lang="en" spellcheck="true"
                         <option value="">Otro</option>
                     </optgroup>
                 </select>
-<pre><code>
+<pre>
+<code>
 &lt;select style="margin: 0 auto; display: block; width: 50%;"&gt;
     &lt;optgroup label="Lenguajes de Programación">&lt;/optgroup&gt;
     &lt;option value="">Python&lt;/option&gt;
     &lt;option value="">Javascript&lt;/option&gt;
 &lt;/select&gt;
 
-</code></pre>
+</code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
+</pre>
             </div>
-            
+
+<!-- Autocompletar -->
+
             <div id="10" class="etiqueta">
-                <h2>Autocompletar</h2>
+                <h2>10. Autocompletar</h2>
                 
                 <form action="#">
                     <label for="autocompletar" style="display: block; width: 100%;">Introduce un lenguaje de programación:</label>
@@ -305,8 +364,15 @@ lang="en" spellcheck="true"
 <pre>
 <code>
 &lt;form action="#"&gt;
-    &lt;label for="autocompletar" style="display: block; width: 100%;"&gt;Introduce un lenguaje de programación:&lt;/label&gt;
-&lt;input list="lenguajes-poo" id="autocompletar" style="display: block; width: 100%;" type="text"&gt;
+    &lt;label for="autocompletar" 
+    style="display: block; width: 100%;"&gt;
+        Introduce un lenguaje de programación:
+    &lt;/label&gt;
+&lt;input 
+    list="lenguajes-poo" 
+    id="autocompletar" 
+    style="display: block; width: 100%;" type="text"
+&gt;
 &lt;/form&gt;
 
 &lt;datalist id="lenguajes-poo"&gt;
@@ -317,6 +383,9 @@ lang="en" spellcheck="true"
 &lt;/datalist&gt;
     
 </code>
+<span class="material-symbols-outlined">
+    content_copy
+</span>
 </pre>
             </div>
 
