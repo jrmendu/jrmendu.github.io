@@ -60,15 +60,25 @@ function restar() {
 
 function multiplicar() {
     let numero = window.prompt("Entra un numero: ");
-    if (isNaN(parseInt(numero))) {
-        alert("no es un buen numero")
+    if ( isNaN(parseInt(numero)) || (numero == "0")) {
+        alert("no es un buen numero");
         asignacion.innerText = contador;
     } else {
         contador *= parseInt(numero);
         asignacion.innerText = contador;
     }
 }
-    
+
+function dividir() {
+    let numero = window.prompt("Entra un numero: ");
+    if (isNaN(parseInt(numero))) {
+        alert("no es un buen numero")
+        asignacion.innerText = contador;
+    } else {
+        contador /= parseInt(numero);
+        asignacion.innerText = contador;
+    }
+}
 
 
 /*tipos */ 
