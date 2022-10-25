@@ -18,32 +18,32 @@ asignacion.innerText = contador;
 /* botó que incrementa i decrementa en fer clic */
 function incrementar() {
     ++contador;
-    asignacion.innerText = contador;
+    asignacion.innerText = contador.toFixed(2);
 }
 
 function decrementar() {
     --contador;
-    asignacion.innerText = contador;
+    asignacion.innerText = contador.toFixed(2);
 }
 
 function doblar() {
     contador *= 2;
-    asignacion.innerText = contador;
+    asignacion.innerText = contador.toFixed(2);
 }
 
 function mitad() {
     contador /= 2;
-    asignacion.innerText = contador;
+    asignacion.innerText = contador.toFixed(2);
 }
 
 function sumar() {
     let numero = window.prompt("Entra un numero: ");
     if (isNaN(parseInt(numero))) {
         alert("no es un buen numero")
-        asignacion.innerText = contador;
+        asignacion.innerText = contador.toFixed(2);
     } else {
     contador += parseInt(numero);
-    asignacion.innerText = contador;
+    asignacion.innerText = contador.toFixed(2);
     }
 }
 
@@ -51,10 +51,10 @@ function restar() {
     let numero = window.prompt("Entra un numero: ");
     if (isNaN(parseInt(numero))) {
         alert("no es un buen numero")
-        asignacion.innerText = contador;
+        asignacion.innerText = contador.toFixed(2);
     } else {
     contador -= parseInt(numero);
-    asignacion.innerText = contador;
+    asignacion.innerText = contador.toFixed(2);
     }
 }
 
@@ -62,22 +62,38 @@ function multiplicar() {
     let numero = window.prompt("Entra un numero: ");
     if ( isNaN(parseInt(numero)) || (numero == "0")) {
         alert("no es un buen numero");
-        asignacion.innerText = contador;
+        asignacion.innerText = contador.toFixed(2);
     } else {
         contador *= parseInt(numero);
-        asignacion.innerText = contador;
+        asignacion.innerText = contador.toFixed(2);
     }
 }
 
 function dividir() {
     let numero = window.prompt("Entra un numero: ");
-    if (isNaN(parseInt(numero))) {
+    if (isNaN(parseInt(numero)) || parseInt(numero)==0) {
         alert("no es un buen numero")
-        asignacion.innerText = contador;
+        asignacion.innerText = contador.toFixed(2);
     } else {
         contador /= parseInt(numero);
-        asignacion.innerText = contador;
+        asignacion.innerText = contador.toFixed(2);
     }
+}
+
+function exponent() {
+    let numero = window.prompt("Entra un numero: ");
+    if (isNaN(parseInt(numero))) {
+        alert("no es un buen numero")
+        asignacion.innerText = contador.toFixed(2);
+    } else {
+    contador **= parseInt(numero);
+    asignacion.innerText = contador.toFixed(2);
+    }
+}
+
+function reiniciar() {
+    contador = 0;
+    asignacion.innerText = contador;
 }
 
 

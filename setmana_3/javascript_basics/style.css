@@ -30,10 +30,14 @@ h1, h2, h3 {
 }
 div {
     margin:10px;
+    justify-content: center;
 }
 button {
     margin: 0 5px;
+    background-color: rgb(218, 214, 214) ;
+    border-radius: 5px;
 }
+
 ul {
     list-style-type:decimal-leading-zero;
 }
@@ -47,5 +51,10 @@ ul {
 
 #operadores, #asignacion, #tipos {
     font-family: "Open Sans,, sans-serif";
+    border: 2px solid rgb(8, 8, 8);
+    background-color: rgb(210, 200, 214);
+    padding: 3px;
+    border-radius: 5%;
+    
 }
 
