@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor Numeros Romanos</title>
+</head>
+<body>
+    <h1>Conversor Numeros Romanos</h1>
+    <main>
+        <div id="conversor-container">
+
+    <!-- Traiem resultat a la pantalla -->
+            <label for="resultados">Resultados</label>
+            <div name="resultados" id="resultados" ></div>
+
+    <!-- Selector d' operacions -->
+            <label for="operaciones">Acción</label>
+            <select name="operaciones" id="operaciones">
+                <option value="numRom">Num a Rom</option>
+                <option value="romNum">Rom a num</option>
+            </select>
+            <div>
+    <!-- Operand 1 input -->
+            <label for="myInputA">Numero a convertir</label>
+            <input id="myInputA" type="number" value="1">
+
+    <!-- Botó d'enviament  -->
+            <button id="calc-btn" onclick="convertir()">Convertir</button>
+            </div>
+        </div>
+    </main>
+    <script src="conversor.js"></script>
+</body>
+</html>

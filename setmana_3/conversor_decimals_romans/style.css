@@ -1,0 +1,107 @@
+/* Hoja de estilos para aplicar Flex box 
+*  Aplicamos esta hoja de estilos a contenido HTML de temas
+*/
+
+/* Setup  inicial de las cajas div en el container */
+body, html {
+    margin: 0;
+}
+
+body {
+    background-color: rgba(16, 214, 214, 0.505);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #902926;
+    /* color: rgb(104, 55, 55); */
+}
+
+/****************************************/
+#conversor-container {
+    background-color: rgba(241, 200, 146, 0.865);
+    border-radius: 10%;
+    border: 2px solid rgb(85, 8, 8);
+    max-width: 30vw;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+#conversor-container code {
+    font-size: 1.2em;
+    padding: 0px 10px;
+    margin: 0px 0px;
+    background-color: lightgray;
+}
+
+#conversor-container p,
+#conversor-container input,
+#conversor-container select,
+#conversor-container label,
+#calc-btn {
+    display: block;
+    margin: 5px auto;
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+}
+
+#conversor-container select {
+    background-color: rgb(250, 215, 169);
+    font-weight: 600;
+}
+
+#conversor-container input {
+    display: inline-block;
+    background-color: rgb(250, 215, 169);
+}
+
+#conversor-container #resultados {
+    font-size: 2em;
+    color: rgb(58, 35, 6); 
+    background-color: rgb(209, 173, 129);
+    border: 2px solid rgb(66, 37, 3);
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+#conversor-container div {
+    border: 2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px auto;
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+
+}
+
+#conversor-container label {
+    margin: 10px auto -5px;
+    width:100%;
+    display: inline-flex;
+    
+}
+
+#calc-btn {
+    background-color: rgba(33, 33, 164, 0.89);
+    color: rgb(241, 178, 106);
+    box-shadow: 0;
+    border: 0;
+    border-radius: 5px;
+    margin: 15px auto 5px;
+    display: inline-flex;
+}
+
