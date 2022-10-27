@@ -72,7 +72,7 @@ hr {
     width: 50%;
     min-height: 1.75em;
     text-align: center;
-    margin: 20px auto 5px;
+    margin: 10px auto 5px;
     display: block;
 }
 
@@ -90,6 +90,16 @@ hr {
 /* Botó pe enviar */
 #calc-btn {
     background-color: rgba(33, 33, 164, 0.89);
+    color: rgb(241, 178, 106);
+    width: 50%;
+    min-height: 1.75em;
+    border-radius: 5px;
+    margin: 15px auto 0px;
+    display: block;
+}
+
+#reset-btn {
+    background-color: rgba(236, 95, 95, 0.89);
     color: rgb(241, 178, 106);
     width: 50%;
     min-height: 1.75em;

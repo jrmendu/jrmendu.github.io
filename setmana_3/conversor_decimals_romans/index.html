@@ -30,14 +30,18 @@
                 <option value="4">5</option>
             </select>
 
-            
     <!-- Numerador 1 Denominador -->
             <label for="myInputA">Fracció</label>
-            <input id="myInputA" type="number" placeholder="0">
+            <input id="myInputA" type="number" placeholder="">
             <hr>
-            <input id="myInputB" type="number" placeholder="1">
+            <input id="myInputB" type="number" placeholder="">
     <!-- Botó d'enviament  -->
             <button id="calc-btn" onclick="convertir()">Convertir</button>
+    <!-- Botó de reset  -->
+            <button id="reset-btn" onclick="reset()">
+                <span class="material-symbols-outlined">delete</span>
+                <span id="borrar-span">Reset</span> 
+            </button>
             
         </div>
     </main>
