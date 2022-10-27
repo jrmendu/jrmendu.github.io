@@ -1,75 +1,39 @@
-/* Funciones */
+/* Bucle for */
+// exemple 1
+let texto = "";
 
-// Ejemplo: función que calcula el precio final de un producto añadiendo 21% de IVA
-
-let variableGlobal = "Texto en línea 5";
-let variableGlobal2 = "Texto en línea 6";
-
-// Definimos variables con el objeto donde vamos a colocar el resultado
-let ejemplo = document.getElementById("ejemplo");
-let ejemplo2 = document.getElementById("ejemplo2");
-// Usar o LLAMAR la función calcularPrecioFinal
-let precio = calcularPrecioFinal(100); 
-// Escribir el dato recibido de la fn en el elemento ejemplo
-ejemplo.innerText = "Ejemplo 1 --> El precio calculado es: " + String(precio) + " €.";
-ejemplo2.innerText = "Ejemplo 2 --> " + calcularPrecioFinal2(200);
-
-/* Ejercicios */
-let ejercicio1 = document.getElementById("ejercicio-1");
-let array = calcularDesglose(100);
-ejercicio1.innerText = "Return de la funció --> " + array;
-
-// Escribimos variable global
-// Variable Global 
-modificarVariableGlobal();
-console.log(variableGlobal);
-// Variable Global 2
-modificarVariableGlobal2();
-console.log(variableGlobal2);
-
-/* Funciones */
-
-// Input o entrada: precioBase
-// Función que calcula el 21% del IVA y lo suma al precioBase. 
-// Output o salida: precioFinal
-function calcularPrecioFinal(precioBase){
-    // Calculamos IVA como el 21% del parámetro precioBase
-    let iva = 21/100 * precioBase;
-    // Calculamos el precioFinal como la suma de precioBase más IVA
-    let precioFinal = precioBase + iva;
-    // Retornamos o devolvemos el precioFinal calculado
-    return precioFinal;
+for (let i = 0; i < 100; i++) {
+    texto += "hola"
 }
 
-function calcularPrecioFinal2(precioBase){
-    // Calculamos IVA como el 21% del parámetro precioBase
-    let iva = 21/100 * precioBase;
-    // Calculamos el precioFinal como la suma de precioBase más IVA
-    let precioFinal = precioBase + iva;
-    // Retornamos o devolvemos el precioFinal calculado
-    let salidaFormateada = "El precio calculado es: " + String(precioFinal) + " €.";
-    return salidaFormateada;
+document.getElementById("ejemplo").innerText = texto
+
+// exemple 2 --> numeros parells de 0 a 100
+let parells = 0
+let array = []
+
+for (let i = 0; i <=100; i++) {
+    if (i % 2 == 0) {
+        parells += 1
+        array.push(i)
+    }
 }
 
-/* Función para practicar scope o ámbito */
-function modificarVariableGlobal(){
-    variableGlobal = "Nuevo texto desde función en línea 39"
-}
-/* Función para practicar scope o ámbito */
-function modificarVariableGlobal2(){
-    let variableGlobal2;
-    variableGlobal2 = "Nuevo texto desde función en línea 45"
-}
+document.getElementById("ejemplo2").innerText = "De 0 a 100 hi ha " + parells + 
+                                            " numeros parells.\nSon en aquesta llista \n" + array;
 
-// Ejercicio -> recibimos cantidad total y calculamos el desglose de precio base e IVA
-function calcularDesglose(precioFinal){
-    let precioBase = precioFinal / 1.21;
-    let iva = precioFinal - precioBase;
-    // Ej. limitar los decimales a 2 decimales
-    // Ej. cambiar a texto -> formatear la salida
-    return [precioBase, iva]
-}
-// Ejercicio -> función que añada 10% de IVA
-// Ejercicio -> función que añada 4% de IVA
+// Podem escriure codi html. No molt recomenable aixi
+let html = "";
+for(let i = 0; i <=5; i++) {
+    html += "<p> paragraf: " + String(i) + "</p>\n";}
+document.getElementById("ejercicio-1").innerHTML = html;
 
-// Calculadora
+// divisors de 20
+let divisors = "";
+let limit = 100;
+for(let i = 1; i <= limit; i++) {
+    if(20 % i == 0) {
+        divisors += i + ",  "
+    }
+}
+document.getElementById("ejercicio-2").innerText = "Divisors de " + limit + " --> " + divisors;
