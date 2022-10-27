@@ -9,38 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Conversor Fraccions a Decimals</title>
+    <title>Conversor Numeros Romanos</title>
 </head>
 <body>
-    <h1>Conversor Fraccions a Decimals</h1>
+    <h1>Conversor Numeros Romanos</h1>
     <main>
         <div id="conversor-container">
 
     <!-- Traiem resultat a la pantalla -->
-            <label for="resultados">Numero Decimal</label>
+            <label for="resultados">Numero Romano</label>
             <div name="resultados" id="resultados" class="resultat-div"></div>
 
-            <label for="decimales"></label>
-            <select name="decimales" id="decimales">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2" selected>2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="4">5</option>
-            </select>
+            <div class="flex-div">
+    <!-- Operand 1 input -->
+            <label for="myInputA">Numero a convertir</label>
+            <input id="myInputA" type="number" value="1">
 
-            
-    <!-- Numerador 1 Denominador -->
-            <label for="myInputA">Fracció</label>
-            <input id="myInputA" type="number" placeholder="0">
-            <hr>
-            <input id="myInputB" type="number" placeholder="1">
     <!-- Botó d'enviament  -->
             <button id="calc-btn" onclick="convertir()">Convertir</button>
-            
+            </div>
         </div>
     </main>
-    <script src="fraccio-decimal.js"></script>
+    <script src="conversor.js"></script>
 </body>
 </html>

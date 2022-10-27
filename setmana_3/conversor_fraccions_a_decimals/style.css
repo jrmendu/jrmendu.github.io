@@ -1,8 +1,6 @@
 
 
 /* Setup  inicial  */
-
-/* Etiquetes */
 body, html {
     margin: 0;
 }
@@ -18,13 +16,7 @@ h1 {
     color: #902926;
 }
 
-hr {
-    width: 50%;
-}
-
 /****************************************/
-
-/* Container Gran */
 #conversor-container {
     background-color: rgba(241, 200, 146, 0.865);
     border-radius: 10%;
@@ -34,22 +26,19 @@ hr {
     padding: 15px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    display: block;
+    display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;  
 }
 
-/* labels */
 #conversor-container label {
     margin: 10px auto;
     width:100%;
     font-weight: 500;
     text-align: center;
-    display: block;
 }
 
-/* Div per on surt el resultat */
 .resultat-div {
     font-size: 2em;
     color: rgb(58, 35, 6); 
@@ -67,27 +56,33 @@ hr {
 }
 
 #conversor-container select {
-    background-color: rgb(250, 215, 169); 
-    border: 1px solid rgb(250, 194, 120);
-    width: 50%;
+    background-color: rgb(250, 215, 169);
+    font-weight: 600;
+    border:5px solid green;
+    margin: 5px auto;
+    width: 80%;
     min-height: 1.75em;
     text-align: center;
-    margin: 20px auto 5px;
-    display: block;
 }
 
-/* inputs per on demanem els numeros */
+.flex-div {
+    margin: 10px auto;
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #conversor-container input {
     background-color: rgb(250, 215, 169); 
-    border: 1px solid rgb(250, 194, 120);
+    border: 5px solid green; 
     width: 50%;
     min-height: 1.75em;
     text-align: center;
     margin: 2px auto 5px;
-    display: block;
 }
 
-/* Botó pe enviar */
 #calc-btn {
     background-color: rgba(33, 33, 164, 0.89);
     color: rgb(241, 178, 106);
@@ -95,10 +90,8 @@ hr {
     min-height: 1.75em;
     border-radius: 5px;
     margin: 15px auto 0px;
-    display: block;
 }
 
-/* media queris */
 @media (width > 800px){
     #conversor-container div {
         max-width: 450px;
