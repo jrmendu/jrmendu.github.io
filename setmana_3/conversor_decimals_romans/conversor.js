@@ -43,20 +43,35 @@ function procesarArray(arr) {
     char2 = String(arr[2]); // decenas
     char3 = String(arr[3]); // unidades
 
+    let milRomano = simbolosRomano(1000)
+    let dRomano = simbolosRomano(500)
+    let cienRomano = simbolosRomano(100)
+    let diezRomano = simbolosRomano(10)
+    let unoRomano = simbolosRomano(1)
+
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
     // Miles: 0, 1, 2, 3
-    if( char0 == 0 ){ char0 = "" }
-    else if( char0 == 1 ){ char0 = simboloRomano(1000) }
-    else if( char0 == 2 ){ char0 = simboloRomano(1000).repeat(2) }
-    else if( char0 == 3 ){ char0 = simboloRomano(1000).repeat(3) }
+    if( char0 == 0 )     { char0 = "" }
+    else if( char0 == 1 ){ char0 = milRomano }            // treu M
+    else if( char0 == 2 ){ char0 = milRomano.repeat(2) }  // treu MM
+    else if( char0 == 3 ){ char0 = milRomano.repeat(3) }  // treu MMM
 
-    // Centenas: 0, 1, ..., 9
-    if( char1 == 0 ){ char1 = "" }
-    else if( char1 == 1 ){ char1 = simboloRomano(1000) }
-    else if( char1 == 2 ){ char1 = simboloRomano(1000).repeat(2) }
-    else if( char1 == 3 ){ char1 = simboloRomano(1000).repeat(3) }
+    // Centenas: 0, 1, 2, 3
+    if( char1 == 0 )     { char1 = "" }
+    else if( char1 >= 1 & char1 <= 3){ char1 = cienRomano.repeat(char1) } // treu C, CC, CCC
+    // centenes 4 -> CD
+    else if( char1 == 4 ){ char1 = cienRomano + dRomano }
+    // centenes 5 -> D
+    else if(char1 == 5) {char1 = dRomano}
+    // centenes 6 DC, 7 DCC, 8 DCCC
+    else if(char1 >= 6 & char1 <= 8) {
+        char1 = dRomano + cienRomano.repeat(Number(char1) - 5)
+    }
+    // centenes 9 CM
+    else if( char1 == 9 ){ char1 = cienRomano + milRomano }
+    else if( char1 == 3 ){ char1 = milRomano.repeat(3) }
     // Decenas: 0, 1 ... 9
 
     // Unidades: 0, ... 9
