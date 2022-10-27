@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <title>Conversor Fraccions a Decimals</title>
 </head>
@@ -35,13 +36,14 @@
             <input id="myInputA" type="number" placeholder="">
             <hr>
             <input id="myInputB" type="number" placeholder="">
+    <!-- Botó de reset  -->
+        <button id="reset-btn" onclick="reset()">
+            <span class="material-symbols-outlined">delete</span>
+            <span id="borrar-span">Reset</span> 
+        </button>
     <!-- Botó d'enviament  -->
             <button id="calc-btn" onclick="convertir()">Convertir</button>
-    <!-- Botó de reset  -->
-            <button id="reset-btn" onclick="reset()">
-                <span class="material-symbols-outlined">delete</span>
-                <span id="borrar-span">Reset</span> 
-            </button>
+    
             
         </div>
     </main>
