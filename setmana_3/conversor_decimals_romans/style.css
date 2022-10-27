@@ -1,8 +1,6 @@
-/* Hoja de estilos para aplicar Flex box 
-*  Aplicamos esta hoja de estilos a contenido HTML de temas
-*/
 
-/* Setup  inicial de las cajas div en el container */
+
+/* Setup  inicial  */
 body, html {
     margin: 0;
 }
@@ -15,10 +13,7 @@ body {
 
 h1 {
     text-align: center;
-}
-h1, h2, h3 {
     color: #902926;
-    /* color: rgb(104, 55, 55); */
 }
 
 /****************************************/
@@ -34,74 +29,68 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-wrap: wrap;
-    
-}
-#conversor-container code {
-    font-size: 1.2em;
-    padding: 0px 10px;
-    margin: 0px 0px;
-    background-color: lightgray;
-}
-
-#conversor-container p,
-#conversor-container input,
-#conversor-container select,
-#conversor-container label,
-#calc-btn {
-    display: block;
-    margin: 5px auto;
-    width: 80%;
-    min-height: 1.75em;
-    text-align: center;
-}
-
-#conversor-container select {
-    background-color: rgb(250, 215, 169);
-    font-weight: 600;
-}
-
-#conversor-container input {
-    display: inline-block;
-    background-color: rgb(250, 215, 169);
-}
-
-#conversor-container #resultados {
-    font-size: 2em;
-    color: rgb(58, 35, 6); 
-    background-color: rgb(209, 173, 129);
-    border: 2px solid rgb(66, 37, 3);
-    border-radius: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-}
-
-#conversor-container div {
-    border: 2px solid blue;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px auto;
-    width: 80%;
-    min-height: 1.75em;
-    text-align: center;
-
+    flex-wrap: wrap;  
 }
 
 #conversor-container label {
     margin: 10px auto -5px;
     width:100%;
-    display: inline-flex;
-    
+    font-weight: 500;
+    text-align: center;
+}
+
+.resultat-div {
+    font-size: 2em;
+    color: rgb(58, 35, 6); 
+    background-color: rgb(209, 173, 129);
+    border: 3px solid rgb(66, 37, 3);
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-wrap: wrap; 
+    min-height: 1.75em;
+    text-align: center;
+    margin: 5px auto;
+    width: 80%;
+}
+
+#conversor-container select {
+    background-color: rgb(250, 215, 169);
+    font-weight: 600;
+    border:5px solid green;
+    margin: 5px auto;
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+}
+
+.flex-div {
+    border: 2px solid blue;
+    margin: 10px auto;
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#conversor-container input {
+    background-color: rgb(250, 215, 169); 
+    border: 5px solid green; 
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+    margin: 10px auto 5px;
 }
 
 #calc-btn {
     background-color: rgba(33, 33, 164, 0.89);
     color: rgb(241, 178, 106);
-    box-shadow: 0;
-    border: 0;
+    width: 80%;
+    min-height: 1.75em;
     border-radius: 5px;
-    margin: 15px auto 5px;
-    display: inline-flex;
+    margin: 15px auto 0px;
 }
+
 
