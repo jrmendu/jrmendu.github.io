@@ -37,3 +37,35 @@ for(let i = 1; i <= limit; i++) {
     }
 }
 document.getElementById("ejercicio-2").innerText = "Divisors de " + limit + " --> " + divisors;
+
+// divisors amb resta dos
+ let numero = demanarNumero();
+for (let i = 1; i < numero; i++) {
+    if (i % 3 == 2) {
+        console.log(i);
+    }
+}
+
+// repetir caràcter
+let number = demanarNumero()
+let caracter = prompt("Introdueix un caràcter: ")
+document.getElementById("ejercicio-3").innerText = caracter.repeat(number);
+
+// matrius
+let text = "";
+for (let i=0; i<2; i++){
+    for (let j = 0; j<5; j++) {
+        text += "[" + i + "]:" + "["+j+"]\n";
+    }
+}
+document.getElementById("ejercicio-4").innerText = text;
+
+
+
+
+
+// funcions auxiliars
+function demanarNumero() {
+    let numero = Number(prompt("Introdueix un numero: "));
+    return numero;
+}
