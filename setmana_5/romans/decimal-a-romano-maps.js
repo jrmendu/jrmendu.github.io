@@ -43,54 +43,36 @@ function simboloRomano(num) {
     else { return NaN; }
 }
 
-function calcularChar(num, unidad) {
-    // op ternario
-        // num -> 0-9 // miles -> 0-3
-        // unidad -> 1, 10, 100, 1000 
+function calcularChar(num, unidad, map) {
+    // op ternario ? : 
+        // Number num -> 0-9 // miles -> 0-3
+        // str unidad -> 1, 10, 100, 1000 
+        let char;
+    if(unidad != '1000'){
+char = (num >= 0 && num <= 3) ? map.get(unidad).repeat(num) :                     // "", "C", "CC", "CCC"
+       (num == 4 )            ? map.get(unidad) + map.get(String(5*unidad)) :     // "CD"
+       (num >= 5 && num <= 8) ? map.get(String(5*unidad)) + map.get(unidad).repeat(Number(num) - 5) : // "D", "DC", "DCC", "DCCC"
+       (num == 9)             ? map.get(unidad) + map.get(String(10*unidad)) : "" // "CM"
+    } else {
+            char = (num >= 0 && num <= 3) ? map.get('1000') .repeat(Number(num)) : ""
+        }
+        
     return char;    // 7*1 -> VII, 5*10 -> L, 4*100 -> CD, 2*1000 -> MM
 }
 
 // Fn que procesa el array del número 
-// Recibe array de descomponer(num) -> [1, 9, 8, 9]
-// Devuelve string de caracteres
+    // Recibe array de descomponer(num) -> [1, 9, 8, 9]
+    // Devuelve string de caracteres
 function procesarArray(arr) {
     let [char0, char1, char2, char3] = [...arr]; // char0 -> miles | char1 -> centenas | char2 -> decenas | char3 -> unidades
-
-    // 4. Rehacer con map -> prescindimos de simboloRomano() ---> map
     let map = new Map( Object.entries( {1:"I", 5:"V", 10: "X", 50: "L", 100: "C", 500: "D", 1000: "M"} ) )
-    // let milesMap = new Map( Object.entries( {0:"", 1:"M", 2: "MM", 3: "MMM"} ) )
-
-    // -- Repetir para cada char --
-    // Si es cero -> nada -> ""
     
-// Miles: 0, 1, 2, 3
-    // Opcion A: milesMap y operador ternario
-    // milesMap.has(char0) ? char0 = milesMap.get(char0) : char0 = "";
-// Opción B: map y repeat(char0)
-char0 = (char0 >= 0 && char0 <= 3) ? map.get('1000').repeat(char0) : "" // -> "", "M", "MM", "MMM"
-
-// Centenas: 0, 1, ..., 9
-char1 = (char1 >= 0 && char1 <= 3) ? map.get('100').repeat(char1) :     // "", "C", "CC", "CCC"
-        (char1 == 4 ) ? map.get('100') + map.get('500') :               // "CD"
-        (char1 >= 5 && char1 <= 8) ? map.get('500') + map.get('100').repeat(Number(char1) - 5) : // "D", "DC", "DCC", "DCCC"
-        (char1 == 9) ? map.get('100') + map.get('1000') : ""    // "CM"
-
-// Decenas: 0, 1 ... 9
-char2 = (char2 >= 0 && char2 <= 3) ? map.get('10').repeat(char2) :     // "", "X", "XX", "XXX"
-        (char2 == 4 ) ? map.get('10') + map.get('50') :                // "XL"
-        (char2 >= 5 && char2 <= 8) ? map.get('50') + map.get('10').repeat(Number(char2) - 5) : // "L", "LX", "LXX", "LXXX"
-        (char2 == 9) ? map.get('10') + map.get('100') : ""              // "XC"
+    char0 = calcularChar(char0, '1000', map)// Miles:    0, 1, 2, 3   -> "", "M", "MM", "MMM"
+    char1 = calcularChar(char1, '100', map) // Centenas: 0, 1, ..., 9 -> "", "C", ... "CM"
+    char2 = calcularChar(char2, '10', map)  // Decenas:  0, 1 ... 9   -> "", "X", ... "XC"
+    char3 = calcularChar(char3, '1', map)   // Unidades: 0, ... 9     -> "", "I", ... "IX"
     
-// Unidades: 0, ... 9
-char3 = (char3 >= 0 && char3 <= 3) ? map.get('1').repeat(char3) :     // "", "I", "II", "III"
-        (char3 == 4 ) ? map.get('1') + map.get('5') :                // "IV"
-        (char3 >= 5 && char3 <= 8) ? map.get('5') + map.get('1').repeat(Number(char3) - 5) : // "V", "VI", "VII", "VIII"
-        (char3 == 9) ? map.get('1') + map.get('10') : ""              // "IX"    
-    
-    // Si es cualquier otro valor, ej. 4, 9... 
-        // -> lógica para pedir 5 - 1 -> IV o 10 - 1 -> IX
-    
-    return char0 + char1 + char2 + char3; // str como concatenación de estos chars
+return char0 + char1 + char2 + char3; // str como concatenación de estos chars
 }
 
 //  Descomposición del número en sumandos 
@@ -102,40 +84,24 @@ char3 = (char3 >= 0 && char3 <= 3) ? map.get('1').repeat(char3) :     // "", "I"
     Calcula los sumandos de un número determinado 
     -> 1, 10, 100, 1000   
 */
+
 function descomponer(num){
     /* Ejemplos de descomposición:
     2022 -> 2*1000 + 2*10 + 2*1 -> [M, C, X, I] -> [2, 0, 2, 2]
+    //       M  C  D  U
     1989 -> [1, 9, 8, 9] 
     147  -> [0, 1, 4, 7]
     65  ->  [0, 0, 6, 5]
     8   ->  [0, 0, 0, 8]
     */
-
-    //         M  C  D  U
-    let arr = [0, 0, 0, 0];
-
-    // Abordar casos en los que recibimos 1, 2, o 3 dígitos
-        // Usando str.length determinamos si le faltan ceros al num
-            // añadimos los ceros a la izq
          
     // Algoritmo
         /* 0. Recibimos número num
-         * 1. Cambiamos a tipo string -> String(num)
-         * 2. Asignamos a cada posición del array el caracter correspondiente
-         *  2.5. Cambiamos el tipo a Number
+         * 1. Cambiamos a tipo string -> String(num) + tomamos longitud con length
+         * 2. Asignamos a cada posición del array el caracter correspondiente con ...
          */
-    let numStr = String(num)
-    
-    let len = numStr.length // 1, 2, 3, 4
-    if( len === 1 )     { numStr = '000' + numStr }
-    else if( len === 2) { numStr = '00' + numStr }
-    else if( len === 3) { numStr = '0' + numStr }
-
-    // Estas asignaciones funciona cuando son 4 dígitos
-    arr[0] = numStr[0]
-    arr[1] = numStr[1]
-    arr[2] = numStr[2]
-    arr[3] = numStr[3]
-
-    return arr; // 1. retornar string ?
+    let numStr = String(num), len = numStr.length // 1, 2, 3, 4
+    numStr = '0'.repeat(4-len) + numStr           // Añadimos 0s a la izq hasta 4 dígitos
+        
+    return [...numStr]; // arr de chars de numStr
 }
