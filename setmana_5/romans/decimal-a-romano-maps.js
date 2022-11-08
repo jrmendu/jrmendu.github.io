@@ -3,16 +3,11 @@
 function convertir(){
     // Leemos el campo del input y llamamos a convertir()
     let numDecimal = document.getElementById("myInputA").valueAsNumber; 
+    let esNumDecimalValido = false, msj1 = "Debes ingresar un número positivo", msj2 = "No podemos representar este número.\nIngresa un número inferior a 4000.";
 
     // Validamos que num esté entre 1 y 3999
         // Para evitar que salga NaN ponemos un valor por defecto para el input
-    if( numDecimal < 1 ){
-        alert("Debes ingresar un número positivo")
-        return NaN;
-    } else if ( numDecimal > 3999 ){
-        alert("No podemos representar este número.\nIngresa un número inferior a 4000.")
-        return NaN;
-    }
+    numDecimal < 1 ? alert(msj1) : numDecimal > 3999 ? alert(msj2) : esNumDecimalValido = true
     
     // Recibe número decimal entero
     /*
@@ -23,9 +18,8 @@ function convertir(){
     // Equivalencia con símbolos en numeración romana
     // Ordenación y eliminación de símbolos no necesarios -> procesarArray()
 
-    let arr = descomponer(numDecimal);      // [1, 2, 3, 4]
-    let numRomano = procesarArray(arr);     // "M CC XXX IV" // 2. Pasar arr de numbers a procesarArray()
-    document.getElementById("resultados").innerText = numRomano;
+    return esNumDecimalValido ? ( document.getElementById("resultados").innerText = procesarArray(descomponer(numDecimal)) ) // 1234 -> [1, 2, 3, 4] -> "M CC XXX IV"
+    : document.getElementById("resultados").innerText = ""
 }
 
 // Recibe un número (1, 5, 10, 50, 100, 1000) y 
