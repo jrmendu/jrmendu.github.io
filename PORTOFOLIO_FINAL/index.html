@@ -17,8 +17,8 @@
             <div class="container-fluid">
                 <!-- afegir logo -->
                 <a class="navbar-brand" href="#"> 
-                    <img class="bi me-2" src="#" width="40" alt="logo">
-                    <span> JR </span>
+                    <img class="bi me-2 rounded-circle" src="../imatges/logo.png" width="40" alt="logo">
+                    <span>  </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,21 +26,18 @@
               <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0 mx-auto">
                   <li class="nav-item mx-4">
-                    <a class="nav-link active" href="#"> Inicio
+                    <a class="nav-link active" href="#inicio"> Inicio
                       <span class="visually-hidden">(current)</span>
                     </a>
                   </li>
                   <li class="nav-item mx-4">
-                    <a class="nav-link" href="#"> Acerca de</a>
+                    <a class="nav-link" href="#about-me"> Acerca de</a>
                   </li>
                   <li class="nav-item mx-4">
-                    <a class="nav-link" href="#"> Portafolio </a>
+                    <a class="nav-link" href="#portafolio"> Portafolio </a>
                   </li>
                   <li class="nav-item mx-4">
-                    <a class="nav-link" href="#"> Proyectos </a>
-                  </li>
-                  <li class="nav-item mx-4">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#contacto">Contacto</a>
                   </li>
                 </ul>
               </div>
@@ -48,9 +45,9 @@
           </nav>
     </header>
 
-    <main>
-    <!-- acerca de -->    
-      <section>
+    
+    <!-- Intro -->    
+      <section id="inicio">
         <div class="container col-xxl-8 px-4 py-5 border-bottom border-2 border-dark">
           <div class="row flex-lg-row align-items-center g-5 pt-5 pb-2">
             <div class="col-lg-6">
@@ -63,33 +60,144 @@
               </div>
             </div>
             <div class="col-10 col-sm-10 col-lg-6 mx-auto">
-              <img src="../../imatges/aprenent_info.jpg" class="d-block mx-lg-auto img-fluid rounded" alt="hero-banner" width="700" height="500" loading="lazy">
+              <img src="../imatges/aprenent_info.jpg" class="d-block mx-lg-auto img-fluid rounded" alt="hero-banner" width="700" height="500" loading="lazy">
             </div>
           </div>    
         </div>
-     
-        </section>
+      </section>
+
+      <!-- About me ? -->
+      <section id="about-me">
+        <div class="container py-5">
+          <div class="row justify-content-center pb-5 px-3 border-bottom border-2 border-dark">
+            <div class="col-10 col-sm-10 col-lg-4 mb-5 py-2">
+                <img class="d-block mx-auto img-fluid rounded opacity-75" src="../imatges/myAvatar.png" width="300" alt="avatar">
+            </div>
+            <div class="col-sm-8 col-lg-6 col-xl-6 text-center">
+              <h2 class="pb-3 display-5">Acerca de mí</h2>
+              <p class="lead fw-bold fs-4">Desarrollador junior</p>
+              <p class="lead">Los 40 dieron un giro 360º a mi carrera</p>
+              <p class="lead">Python fue la puerta de entrada </p>
+              <p class="lead">Entonces empecé a estudiar </p>
+              <p class="lead fw-bold fs-6">PCAP Python, Desarrollo Web </p>
+              <p class="lead fw-bold fs-6">y Programación Orientada a Objetos</p>
+              <div class="col-lg-6 col-md-6 mt-5 mx-auto ">
+                <a href="#see-more-btn" class="btn btn-light border border-dark rounded-3 px-2 py-2 mx-auto fw-bold"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
+                aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Mostrar proyectos">
+                Tecnologias estudiadas</a>
+              </div>
+            </div>            
+         <!-- Elementos colapsados -->   
+            <div class="collapse mt-3" id="navbarToggleExternalContent">
+              <div class="col-10 mt-2 mx-auto py-2 d-flex flex-wrap justify-content-around">
+                <h4><span class="my-3 badge rounded-pill text-bg-primary">HTML 5</span></h4>
+                <h4><span class="my-3 badge rounded-pill text-bg-primary">CSS 3</span></h4>
+                <h4><span class="my-3 badge rounded-pill text-bg-warning">JS</span></h4>
+                <h4><span class="my-3 badge rounded-pill text-bg-success">SQL</span></h4>
+                <h4><span class="my-3 badge rounded-pill text-bg-info">Python</span></h4>
+                <h4><span class="my-3 badge rounded-pill text-bg-info">PHP</span></h4>
+              </div>
+            </div>
+            <div id="portfolio" class="hidden"></div>
+          </div>
+        </div>
+      </section>
+
     <!-- Portafolio -->
-        <section>
-            <div>
-                <h1> 2 </h1>
+        <section id="portafolio">
+            <div class="container border-bottom border-2 border-dark pb-5">
+              <div class="row justify-content-center ">
+                <div class="col-3 border border-dark align-content-center text-center m-1">
+                  <div class="card border-dark m-3" style="max-width: 20rem;">
+                    <div class="card-header"> Survey Form</div>
+                    <div class="card-body">
+                      <h4 class="card-title">Success card title</h4>
+                      <p class="card-text">Proyecto de Layout con HTML y CSS</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 border border-dark text-center m-1">
+                  <div class="card" ">
+                    <img src="../imatges/baixa9.jpg" class="card-img-top" style="height: 150px;" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 border border-dark text-center m-1">
+                  3 of 3
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-3 border border-dark text-center  m-1">
+                  1 of 3
+                </div>
+                <div class="col-3 border border-dark text-center m-1">
+                  2 of 3
+                </div>
+                <div class="col-3 border border-dark text-center m-1">
+                  3 of 3
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-3 border border-dark text-center m-1">
+                  1 of 3
+                </div>
+                <div class="col-3 border border-dark text-center m-1">
+                  2 of 3
+                </div>
+                <div class="col-3 border border-dark text-center m-1">
+                  3 of 3
+                </div>
+              </div>
             </div>
         </section>
-    <!-- Proyectos -->
-        <section>
-            <div>
-                <h1> 3 </h1>
-            </div>
-        </section>
+    
     <!-- Contacto -->
         <section>
             <div>
-                <h1> 4 </h1>
+                <h1> Contacto </h1>
             </div>
         </section>
-    </main>
+    
+    <!-- Footer -->
+        <div class="container-fluid bg bg-dark pt-0 pb-4"> 
+          <footer class="d-flex flex-wrap justify-content-between col-10 col-sm mx-auto align-items-center pt-3 mt-4">
+            <ul class="d-flex col-sm col-md-10 col-lg-10 col-xl-10 justify-content-center mx-auto my-3 pt-2 px-0">
+              <li class="nav-item rounded py-1 px-2 m-1 small"><a href="#inicio" class="nav-link px-4 py-2 border border-light rounded-5 text-muted">Inicio</a></li>
+              <li class="nav-item rounded py-1 px-2 m-1 small"><a href="#about-me" class="nav-link px-4 py-2 border border-light rounded-5 text-muted">Acerca de</a></li>
+              <li class="nav-item rounded py-1 px-2 m-1 small"><a href="#portfolio" class="nav-link px-4 py-2 border border-light rounded-5 text-muted">Portafolio</a></li>
+              <li class="nav-item rounded py-1 px-2 m-1 small"><a href="#contact" class="nav-link px-4 py-2 border border-light rounded-5 text-muted">Contacto</a></li>
+            </ul>
+  
+            <a href="#inicio" id="logo" class="nav-link px-5 mx-auto">
+              <img class="bi me-2 rounded-circle" src="../imatges/logo.png" width="40" alt="logo">
+              <span class="col-md-4 mb-0 text-muted">© 2022 Josep Rosich</span>
+            </a>
+        
+            <p class="text-muted fw-bold col-md-6 col-lg-8 pt-2 px-5 col-sm mx-auto">Desarrollador Junior Páginas Web y Aplicaciones</p>
+        
+            
+            <!-- Redes sociales 
+             <ul class="d-flex col-sm col-md-8 col-lg-6 col-xl-6 justify-content-around mx-auto my-3">
+                <li><i class="bi bi-linkedin"></i>1</li>
+                <li><i class="bi bi-linkedin"></i>2</li>
+                <li><i class="bi bi-linkedin"></i>3</li>
+                <li><i class="bi bi-linkedin"></i>4</li>
+                <li><i class="bi bi-linkedin"></i>5</li>
+            </ul> -->
+          
+          </footer>
+        </div> 
 
-    <footer>
-
-    </footer>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- Si vamos a usar Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
   </body>
+</html>
