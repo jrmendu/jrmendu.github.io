@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootsrap --> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cosmo/bootstrap.min.css" integrity="sha384-5QFXyVb+lrCzdN228VS3HmzpiE7ZVwLQtkt+0d9W43LQMzz4HBnnqvVxKg6O+04d" crossorigin="anonymous">     
+        <!-- Fontawesome v6 -->
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <!-- CSS archivo-->
+        <link rel="stylesheet" href="../css/style.css">
+        <title> Formulario </title>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
+                <div class="container-fluid">
+                    <!-- afegir logo -->
+                    <a class="navbar-brand" href="#"> 
+                        <img class="bi me-2 rounded-circle" src="../imatges/logo.png" width="40" alt="logo">
+                        <span>  </span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarColor02">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0 ml-auto mr-5">
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="../portafolio.html"> Portafolio </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="datos-personales">
+        <!-- titulo y descripción página-->
+            <div class="container-fluid mt-5 pt-5 text-center">
+                <h1 id="title" class="fw-bold fs-1"> Formulario - Encuesta </h1>
+                <p id="description"> Práctica de HTML y CSS</p>
+            </div>
+
+        <!-- Formulario y encuesta-->  
+            <div class="container-fluid">
+                <form id="survey-form" action="#" method='post'>
+                    <div class="form-group row">
+                        <div class="col-2"></div>
+                        <!-- Formulario -->
+                        <div class="col-md-4 col-12 pl-5 pt-2 bg-light border-left border-top border-bottom border-dark">
+                            <div class="m-3">
+                                <label id="name-label" class="fw-bold"> Nombre </label>
+                                <input type="text" id="name" required placeholder="nombre" class="ml-3 pl-3 text-muted">
+                            </div>
+
+                            <div class="m-3">
+                                <label id="surname-label" class="fw-bold">Apellido </label>
+                                <input type="text" id="surname" required placeholder="apellido" class="ml-3 pl-3">
+                            </div>
+
+                            <div class="m-3">
+                                <label id="number-label" class="fw-bold"> Edad </label>
+                                <input type="number" id="number" min=0 max=10 placeholder="edad" class="ml-4 pl-3 text-muted">
+                            </div>
+
+                            <div class="m-3">
+                                <label id="email-label" class="fw-bold"> Email </label>
+                                <input type="email" id="email" placeholder="email" required class="ml-4 pl-3">
+                            </div>
+
+                            <div class="m-3">
+                                <label id="ciudad-label" class="fw-bold"> Ciudad </label>
+                                <input type="text" id="ciudad" required placeholder="ciudad" class="ml-3 pl-3">
+                            </div>
+                            
+                            <div class="m-3">
+                                <label id="genero" class="fw-bold"> Género </label>
+                                <select id="dropdown" class="ml-3 pl-2">
+                                    <option value="1"> No compartir </option>
+                                    <option value="2"> Femenina </option>
+                                    <option value="3"> Masculino </option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Encuesta -->
+                        <div class="col-md-4 col-12 pt-4 bg-light border-right border-top border-bottom border-dark">
+                            <div class="form-check text-start">
+                                <label for="radio" class="form-check-label fw-bold"> Has estudiado alguna vez informática? </label> <br>
+                                <input type="radio" name="attribute" value="1" id="radio" class="form-check-label ml-5 mt-3"> Si <br>
+                                <input type="radio" name="attribute" value="2" id="radio" class="ml-5"> No <br>
+                                <input type="radio" name="attribute" value="3" id="radio" class="ml-5"> Un poquito
+                            </div>
+                                
+                            <div class="form-check text-start mt-3 ">
+                                <label for="radio" class="form-check-label fw-bold mb-2"> Que lenguajes informáticos conoces? </label> <br>
+                                <input type="checkbox" value="c#" class="ml-3"> C#
+                                <input type="checkbox" value="c++" class="ml-3"> C++
+                                <input type="checkbox" value="java" class="ml-3"> JAVA
+                                <input type="checkbox" value="js" class="ml-3"> JS
+                                <input type="checkbox" value="php" class="ml-3"> PHP <br>
+                                <input type="checkbox" value="python" class="ml-3"> Python
+                                <input type="checkbox" value="html" class="ml-3"> HTML
+                                <input type="checkbox" value="css" class="ml-3"> CSS
+                                <input type="checkbox" value="sql" class="ml-3"> SQL
+                            </div>
+
+                            <label for="textarea" class="form-check-label fw-bold ml-4 mb-2 pt-4"> Comparte tu comentario </label> <br>
+                            <textarea id="textarea" name="texto" rows="2" cols="40" class="form-control mb-3"> </textarea>
+                        </div>
+                        <div class="col-2"></div>
+                        <input type="submit" id ="submit" value="Enviar" class="btn btn-outline-success col-3 mx-auto">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="container-fluid bg bg-dark mt-5 pb-4"> 
+            <footer class="d-flex flex-wrap justify-content-between col-10 col-sm mx-auto align-items-center pt-3 mt-4">
+                <ul class="d-flex col-sm col-md-10 col-lg-10 col-xl-10 justify-content-center mx-auto my-3 pt-2 px-0">
+                    <li class="nav-item rounded py-1 px-2 m-1 mr-3 small"><a href="../portafolio.html" class="nav-link px-4 py-2 border border-light rounded-5 text-muted">Portafolio</a></li>
+                    <li class="nav-item rounded py-1 px-2 m-1 ml-3 small"><a class="nav-link border border-light d-inline-block rounded-5 text-muted"
+                        href="mailto:email@dominio.com?subject='Información servicios de desarrollo web&body=Hola, quiero saber más sobre los diseños y páginas web que has creado...'"
+                        target="_blank">
+                        <i class="far fa-envelope mr-2"></i> Contacto
+                        </a></li>
+                </ul>
+        
+                <a href="#datos-personales" id="logo" class="nav-link px-5 ">
+                    <img class="bi me-2 rounded-circle" src="../imatges/logo.png" width="40" alt="logo">
+                    <span class="col-md-4 mb-0 text-muted">© 2022 Josep Rosich</span>
+                </a>
+            
+                <p class="text-muted fw-bold col-md-6 col-lg-8 pt-2 px-0 col-sm ">Desarrollador Junior Páginas Web y Aplicaciones</p>
+            </footer>
+        </div> 
+    </body> 
+</html>
