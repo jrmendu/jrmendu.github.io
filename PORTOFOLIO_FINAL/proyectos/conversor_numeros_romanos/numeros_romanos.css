@@ -1,0 +1,107 @@
+
+
+/* Setup  inicial  */
+body, html {
+    margin: 0;
+}
+
+body {
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: #902926;
+}
+
+/****************************************/
+#conversor-container {
+    background-color: rgba(241, 200, 146, 0.865);
+    border-radius: 10%;
+    border: 1px solid rgb(85, 8, 8);
+    max-width: 30vw;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;  
+}
+
+#conversor-container label {
+    margin: 10px auto;
+    width:100%;
+    font-weight: 500;
+    text-align: center;
+}
+
+.resultat-div {
+    font-size: 2em;
+    color: rgb(58, 35, 6); 
+    background-color: rgb(209, 173, 129);
+    border: 1px solid rgb(66, 37, 3);
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-wrap: wrap; 
+    min-height: 1.75em;
+    text-align: center;
+    margin: 5px auto;
+    width: 80%;
+}
+
+#conversor-container select {
+    background-color: rgb(250, 215, 169);
+    font-weight: 600;
+    border: 1px solid green;
+    margin: 5px auto;
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+}
+
+#flex-div {
+    margin: 10px auto;
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#conversor-container input {
+    background-color: rgb(250, 215, 169); 
+    border: 2px solid green; 
+    width: 80%;
+    min-height: 1.75em;
+    text-align: center;
+    margin: 2px auto 5px;
+}
+
+#calc-btn {
+    background-color: rgba(33, 33, 164, 0.89);
+    color: rgb(241, 178, 106);
+    width: 50%;
+    min-height: 1.75em;
+    border-radius: 5px;
+    margin: 15px auto 0px;
+}
+
+@media (width > 800px){
+    #conversor-container div {
+        max-width: 450px;
+    }
+}
+
+@media (width < 300px){
+    .resultat-div {
+        font-size: 0.5em;
+    }
+}
+
+
+
+

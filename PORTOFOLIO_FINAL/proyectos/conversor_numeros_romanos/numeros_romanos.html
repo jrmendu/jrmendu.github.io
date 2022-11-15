@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootsrap --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cosmo/bootstrap.min.css" integrity="sha384-5QFXyVb+lrCzdN228VS3HmzpiE7ZVwLQtkt+0d9W43LQMzz4HBnnqvVxKg6O+04d" crossorigin="anonymous">     
+    <!-- Fontawesome v6 -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="numeros_romanos.css">
+    <title>Conversor Numeros Romanos</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
+            <div class="container-fluid">
+                <!-- afegir logo -->
+                <a class="navbar-brand" href="#"> 
+                    <img class="ml-4 rounded-circle" src="../../imatges/logo.png" width="40" alt="logo">
+                    <span>  </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0 ml-auto mr-5">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="../../portafolio.html"> Portafolio </a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main class="mt-5 pt-5">
+        <h1>Conversor Numeros Romanos</h1>
+        <div id="conversor-container">
+            
+    <!-- Traiem resultat a la pantalla -->
+            <label for="resultados">Numero Romano</label>
+            <div name="resultados" id="resultados" class="resultat-div"></div>
+
+            <div id="flex-div">
+    <!-- Operand 1 input -->
+                <label for="myInputA">Numero a convertir</label>
+                <input id="myInputA" type="number" value="1">
+
+    <!-- Botó d'enviament  -->
+                <button id="calc-btn" onclick="convertir()">Convertir</button>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg bg-dark mt-5 pb-4"> 
+        <footer class="d-flex flex-wrap justify-content-between col-12 align-items-center pt-3 mt-4">
+            <ul class="d-flex col-sm col-md-10 col-lg-10 col-xl-10 justify-content-center mx-auto my-3 pt-2 px-0">
+                <li class="nav-item rounded py-1 px-2 m-1 mr-3 small"><a href="../../portafolio.html" class="nav-link px-4 py-2 border border-light rounded-5 text-muted">Portafolio</a></li>
+                <li class="nav-item rounded py-1 px-2 m-1 ml-3 small"><a class="nav-link border border-light d-inline-block rounded-5 text-muted"
+                    href="mailto:email@dominio.com?subject='Información servicios de desarrollo web&body=Hola, quiero saber más sobre los diseños y páginas web que has creado...'"
+                    target="_blank">
+                    <i class="far fa-envelope mr-2"></i> Contacto
+                    </a></li>
+            </ul>
+    
+            <a href="#datos-personales" id="logo" class="nav-link px-5 ">
+                <img class="bi me-2 rounded-circle" src="../../imatges/logo.png" width="40" alt="logo">
+                <span class="col-md-4 mb-0 text-muted">© 2022 Josep Rosich</span>
+            </a>
+
+            <p class="text-muted fw-bold col-md-6 col-lg-8 col-sm pt-2 px-0 ml-5 ">Desarrollador Junior Páginas Web y Aplicaciones</p>
+        </footer>
+    </div> 
+    </main>
+    <script src="conversor.js"></script>
+</body>
+</html>
