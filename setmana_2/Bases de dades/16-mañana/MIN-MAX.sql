@@ -2,19 +2,19 @@
 
 -- Buscamos el mínimo del precio en Products
 SELECT MIN(Price) 
-FROM `w3schools-sql`.Products; -- 1.00 // café para llevar
+FROM `poo2022`.Products; -- 1.00 // café para llevar
 
 -- Buscamos el máximo del precio en Products
 SELECT MAX(Price) 
-FROM `w3schools-sql`.Products; -- 49.99 // árbol de Navidad
+FROM `poo2022`.Products; -- 49.99 // árbol de Navidad
 
 SELECT MIN(ProductName) 
-FROM `w3schools-sql`.Products; -- Devuelve 'Árbol de Navidad'
+FROM `poo2022`.Products; -- Devuelve 'Árbol de Navidad'
 
 SELECT MAX(Price) 
-FROM `w3schools-sql`.Products; -- Devuelve 'Tomates'
+FROM `poo2022`.Products; -- Devuelve 'Tomates'
 
 -- Se puede filtrar con WHERE:
 SELECT MIN(Price) 
-FROM `w3schools-sql`.Products
+FROM `poo2022`.Products
 WHERE ProductId > 1;
